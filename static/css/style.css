@@ -1,0 +1,88 @@
+/* CSS HEX */
+:root{
+    --champagne-pink:#F8E0CFff ;
+    --apricot: #F7C7AAff ;
+    --melon: #DAABA3ff ;
+    --tea-rose-red: #D9B3ADff ;
+    --pale-dogwood: #DBC0B1ff ;
+    --ice-white: rgb(251, 241, 233);
+
+    /* font-color-pallete */
+    --red-brown: #6B240C;
+    --hot-brown: #994D1C;
+    --light-orange: #E48F45;
+    --beige:#F5CCA0;
+}
+
+.borel-regular {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+hr{
+    color: var(--hot-brown);
+}
+.container-sm{
+    margin-top: 5%;
+    /* height: 80vh; */
+    border-radius: 10px;
+    /* background-color: var(--pale-dogwood); */
+    background-color: var(--ice-white);
+}
+
+.button{
+    padding: 5px;
+    color: #994D1C;
+    /* border: none;
+    border-radius: 10px; */
+    /* background-color: transparent; */
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--red-brown);
+  }
+
+.content{
+    padding-left: 2vw;
+    align-content: center;
+}
+
+.img-profile{
+    border-radius: 50%;
+}
+
+.profile-pic{
+    padding: 50px 3vw;
+    max-width: 490px;
+    max-height: auto;
+}
+
+.body-font{
+    color: var(--red-brown);
+}
+
+.carousel.slide{
+    color: var(--red-brown);
+}
+   
+/* .container-fluid{
+    height: 100vmax;
+} */
+
+.ft-body-size{
+    font-size: 25px;
+}
+
+.gif-intro{
+    max-width: 40vw;;
+    max-height: 40vh;;
+}
