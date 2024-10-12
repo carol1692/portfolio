@@ -1,0 +1,35 @@
+.borel-regular {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.container-sm{
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: var(--ice-white);
+}
+
+.content{
+    padding-left: 2vw;
+    align-content: center;
+}
+
+.cv-body{
+    padding: 2vw;
+    background-color: white;
+    border-radius: 30px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+}

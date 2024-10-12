@@ -1,7 +1,14 @@
-
-<nav class="navbar justify-content-start ps-4 barra">
-    <a class="button pt-5 me-3 active fw-bold borel-regular fs-5" href="{{url_for('home')}}"> Home </a>
-    <a class="button pt-5 me-3 borel-regular fs-5" href="{{url_for('skill_page')}}"> My Skills </a>
-    <a class="button pt-5 me-3 borel-regular fs-5" href="{{url_for('contact_page')}}"> Contact </a>
+<nav class="navbar ps-4 barra" >
+    <div class="justify-content-start pt-5">
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('home')}}" id="home"> Home </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('skill_page')}}" id="skills"> Habilidades </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('cv_page')}}" id="cv"> Currículo </a>
+    </div>
+    
+    <div class="form-check form-switch"  >
+        <input class="form-check-input" type="checkbox" name='lang_switch' id="flexSwitch" role="switch" onclick="language('{{id}}')" >
+        <input class="form-check-input" type="checkbox" name='lang_switch_checked' id="flexSwitch_checked" role="switch" onclick="language('{{id}}')" style="display: none;" checked >
+        <label class="form-check-label montserrat-font color-hot-brown" for="flexSwitch">EN</label>
+    </div>
 </nav>
 <hr>

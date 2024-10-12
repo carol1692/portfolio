@@ -14,36 +14,19 @@
     --beige:#F5CCA0;
 }
 
-.borel-regular {
-    font-family: "Borel", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-.montserrat-font {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
 
 hr{
     color: var(--hot-brown);
 }
-.container-sm{
-    margin-top: 5%;
-    /* height: 80vh; */
-    border-radius: 10px;
-    /* background-color: var(--pale-dogwood); */
-    background-color: var(--ice-white);
+
+.color-hot-brown{
+    color: #994D1C;
 }
+
 
 .button{
     padding: 5px;
     color: #994D1C;
-    /* border: none;
-    border-radius: 10px; */
-    /* background-color: transparent; */
     text-decoration: none;
 }
 
@@ -51,32 +34,13 @@ hr{
     color: var(--red-brown);
   }
 
-.content{
-    padding-left: 2vw;
-    align-content: center;
-}
-
-.img-profile{
-    border-radius: 50%;
-}
-
-.profile-pic{
-    padding: 50px 3vw;
-    max-width: 490px;
-    max-height: auto;
+.active{
+    color: var(--red-brown);
 }
 
 .body-font{
     color: var(--red-brown);
 }
-
-.carousel.slide{
-    color: var(--red-brown);
-}
-   
-/* .container-fluid{
-    height: 100vmax;
-} */
 
 .ft-body-size{
     font-size: 25px;
@@ -85,4 +49,30 @@ hr{
 .gif-intro{
     max-width: 40vw;;
     max-height: 40vh;;
+}
+
+li{
+    margin-left: 15px;
+}
+
+.bg-white{
+    background-color: white;
+    width: 100%;
+    /* border-radius: 30px; */
+}
+
+.form-switch .form-check-input {
+  color: var(--hot-brown);
+}
+.form-switch .form-check-input:focus {
+    border-color: var(--red-brown);
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+.form-switch .form-check-input:checked {
+    background-color: var(--hot-brown);
+    border-color:var(--red-brown);
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
 }
