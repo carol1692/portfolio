@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_babel import Babel
+from flask import Flask, render_template, request, send_file, send_from_directory
+import datetime as dt
+
 
 app = Flask(__name__)
 
 LANGUAGE = []
-GUARDA_LANGUAGE = []
+current_date = dt.datetime.now()
+YEAR = current_date.year
 
 def change_language(lang_list):
     new_mode = request.form.get('data')
@@ -23,36 +25,37 @@ def load_language(lang_list):
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    print(f'LANGUAGE inicio: {LANGUAGE}')
     result = load_language(LANGUAGE)
-    
     if request.method == 'POST':
         result =  change_language(LANGUAGE)  
-        # return render_template('index.html', id='home', english=result) 
-    print(f'LANGUAGE: {LANGUAGE}')
-    return render_template('index.html', id='home', english=result)
+    return render_template('index.html', id='home', english=result, year = YEAR)
 
 @app.route("/skills", methods=['GET', 'POST'])
 def skill_page():
-    print(f'LANGUAGE inicio: {LANGUAGE}')
     result = load_language(LANGUAGE)
     
     if request.method == 'POST':
         result =  change_language(LANGUAGE) 
-        # return render_template('index.html', id='home', english=result)  
-    print(f'LANGUAGE: {LANGUAGE}')
-    return render_template('skills.html', id='skills', english=result)
+    return render_template('skills.html', id='skills', english=result, year = YEAR)
 
 @app.route("/cv", methods=['GET', 'POST'])
 def cv_page():
-    print(f'LANGUAGE inicio: {LANGUAGE}')
     result = load_language(LANGUAGE)
-    
     if request.method == 'POST':
-        result =  change_language(LANGUAGE)  
-        # return render_template('index.html', id='home', english=result)
-    print(f'LANGUAGE: {LANGUAGE}') 
-    return render_template('contact.html', id='cv', english=result)
+        result =  change_language(LANGUAGE)
+    return render_template('cv.html', id='cv', english=result, year = YEAR)
+
+@app.route("/download/<cv_version>", methods=['GET', 'POST'])
+def download_cv(cv_version):
+    print(cv_version)
+    if cv_version == 'cv_pt':
+        path= 'static\cvs\cv_Ana Lemos - pt-br.pdf'
+        return send_file(path, as_attachment=True)
+    else:
+        path= 'static\cvs\cv - Ana Lemos - en.pdf'
+        return send_file(path, as_attachment=True)
+       
+    
 
 
 if "__name__" == "__main__":

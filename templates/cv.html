@@ -1,0 +1,93 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+<div class="row mx-auto">
+    <div class="py-4 d-flex justify-content-center">
+        <h2 class="montserrat-font body-font">Download:</h2>
+        <a class="button_download montserrat-font mx-3" id='download_pt' href="{{url_for('download_cv', cv_version='cv_pt')}}">Português - BR</a>
+        <a class="button_download montserrat-font" id='download_en' href="{{url_for('download_cv', cv_version='cv_en')}}">Inglês</a>
+        <!-- <a class="button_download montserrat-font mx-3" id="printer_PT-BR">Português - BR</a>
+        <a class="button_download montserrat-font mx-3" id="printer_EN">Inglês</a> -->
+    </div>
+    <hr>
+    <div class="align-middle content body-font cv-body mt-1" id="portuguese_content">
+        <h1 class="montserrat-font body-font pb-3 "> Ana Carolina Lemos </h1>
+        <hr>
+        <h2> Desenvolvedora Web Full-Stack </h2>
+        <h3> EY - Ernst & Young</h3>
+        <h4> Período: 2024 - 2023  </h4>
+        <h5> Desenvolvimento de aplicação web em Flask, utilizando linguagens Python e Javascript </h5>
+        <hr>
+        <h2> QA Tester </h2>
+        <h3> IBM - Internal Project</h3>
+        <h4> Período: 2022 - 2023  </h4>
+        <h5> Testes de payload utilizando SoapUI </h5>
+        <hr>
+        <h2> Desenvolvedora de aplicações </h2>
+        <h3> IBM - AT&T Project</h3>
+        <h4> Período: 2021 - 2022  </h4>
+        <h5> Suporte ao time de execução de testes pré- produção da aplicação Universal Biller no projeto AT&T. Suporte a clientes, configuração de ambientes de teste e monitoramento do andamento de testes de dados em fase de pré-produção. Desenvolvimento de automações para tornar as tarefas diárias mais ágeis, produtivas e minimizar os erros que no passado tornavam os testes mais extensos. </h5>
+        <hr>
+        <h2> Especialista de Infraestrutura - Suporte de segurança </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: 2019 - 2021  </h4>
+        <h5> Resolução de vulnerabilidades de segurança de O.S em servidores Linux e Windows</h5>
+        <hr>
+        <h2> Especialista de Infraestrutura - Suporte Devops middlewares </h2>
+        <h3> IBM - DevSecOps Project </h3>
+        <h4> Período: Jan/2017 - Mar/2018  </h4>
+        <h5> Suporte a aplicações Rational solution for Collaborative Lifecycle Management (CLM) e UrbanCode Deploy, responsável por resolução de problemas, configuração de agentes, gerenciamentos de usuários </h5>
+        <hr>
+        <h2> Especialista de Infraestrutura - Queue Manager </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Jan/2017 - Dez/2018  </h4>
+        <h5> Responsável pela análise de pedidos de suporte, atendimento de clientes globais, distribuição das requisições entre colegas de time buscando equilíbrio de demanda de trabalho entre eles e treinamento de novos colegas de time. </h5>
+        <hr>
+        <h2> Estagiaria - Queue Dispatcher </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Set/2016 - Dez/2016  </h4>
+        <h5> Responsável pela análise de pedidos de suporte, atendimento de clientes globais e distribuição das requisições entre colegas de time buscando equilíbrio de demanda de trabalho entre eles</h5>
+    </div>
+    <div class="align-middle content body-font cv-body mt-1" id="english_content" style="display: none;">
+        <h1 class="montserrat-font body-font pb-3 "> Ana Carolina Lemos </h1>
+        <hr>
+        <h2> Full-Stack Developer </h2>
+        <h3> EY - Ernst & Young</h3>
+        <h4> Period: 2024 - 2023  </h4>
+        <h5> Development of web applications, using framework Flask, Python and Javascript as main program languages </h5>
+        <hr>
+        <h2> QA Tester </h2>
+        <h3> IBM - Internal Project</h3>
+        <h4> Período: 2022 - 2023  </h4>
+        <h5> Payload tests using SoapUI </h5>
+        <hr>
+        <h2> Application Developer </h2>
+        <h3> IBM - AT&T Project</h3>
+        <h4> Período: 2021 - 2022  </h4>
+        <h5> Monitoring of execution tests in test environment in Universal Biller AT&T Project.</h5>
+        <h5> Development of automations using python helping team to create a status service. </h5>
+        <hr>
+        <h2> Infrastructure Specialist - Security Support </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: 2019 - 2021  </h4>
+        <h5> Resolução de vulnerabilidades de segurança de O.S em servidores Linux e Windows</h5>
+        <hr>
+        <h2> Infrastructure Specialist - Support of Devops middlewares </h2>
+        <h3> IBM - DevSecOps Project </h3>
+        <h4> Período: Jan/2017 - Mar/2018  </h4>
+        <h5> Support of Rational solution for Collaborative Lifecycle Management (CLM) e UrbanCode Deploy,</h5>
+        <h5> troubleshooting, agents configuration, users management </h5>
+        <hr>
+        <h2> Infrastructure Specialist - Queue Manager </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Jan/2017 - Dez/2018  </h4>
+        <h5> Responsável pela análise de pedidos de suporte, atendimento de clientes globais, distribuição das requisições entre colegas de time buscando equilíbrio de demanda de trabalho entre eles e treinamento de novos colegas de time. </h5>
+        <hr>
+        <h2> Intern - Queue Dispatcher </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Set/2016 - Dez/2016  </h4>
+        <h5> Responsável pela análise de pedidos de suporte, atendimento de clientes globais e distribuição das requisições entre colegas de time buscando equilíbrio de demanda de trabalho entre eles</h5>
+    </div>
+</div>
+{% endblock %}

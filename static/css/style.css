@@ -26,13 +26,36 @@ hr{
 
 .button{
     padding: 5px;
-    color: #994D1C;
+    color: var(--hot-brown);
     text-decoration: none;
 }
 
 .button:hover {
     color: var(--red-brown);
   }
+
+
+.button_download{
+    padding: 10px;
+    color: var(--champagne-pink);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    border: none;
+    text-decoration: none; 
+   
+}
+
+.button_download:hover {
+    background-color: var(--hot-brown);
+    color: var(--champagne-pink);
+    border-color: var(--red-brown);
+    text-decoration: none; 
+}
+
+.button_download:active {
+    background-color: var(--red-brown);
+    transform: translateY(4px);
+}
 
 .active{
     color: var(--red-brown);
@@ -75,4 +98,8 @@ li{
     border-color:var(--red-brown);
     border: none;
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+.center{
+    padding-left: 25%;
 }

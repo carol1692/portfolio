@@ -2,7 +2,8 @@ function activeURL(element, english){
     if (english == 'True'){
         document.getElementById("portuguese_content").style.display = "none"; 
         document.getElementById("english_content").style.display = "block"; 
-        document.getElementById("flexSwitch").setAttribute("checked","checked")
+        document.getElementById("download_pt").innerHTML = 'Portuguese - BR';
+        document.getElementById("download_en").innerHTML = 'English';
     }
     document.getElementById(element).classList.add("active","fw-bold")
 }
@@ -25,9 +26,17 @@ function language(id){
                 if( lang == 1){
                     document.getElementById("portuguese_content").style.display = "none"; 
                     document.getElementById("english_content").style.display = "block"; 
+                    document.getElementById("skills_bt").innerHTML = 'Skills';
+                    document.getElementById("cv_bt").innerHTML = 'Resume';
+                    document.getElementById("footer").innerHTML = `${new Date().getFullYear()}, Ana Lemos - Autoral Content`;
+                    
                 }else{
                     document.getElementById("portuguese_content").style.display = "block"; 
                     document.getElementById("english_content").style.display = "none"; 
+                    document.getElementById("skills_bt").innerHTML = 'Habilidades';
+                    document.getElementById("cv_bt").innerHTML = 'Currículo';
+                    document.getElementById("footer").innerHTML = `${new Date().getFullYear()}, Ana Lemos - Conteúdo autoral`;
+
                 }
             },
             error: function(error){
@@ -44,9 +53,19 @@ function language(id){
                 if( lang == 1){
                     document.getElementById("portuguese_content").style.display = "none"; 
                     document.getElementById("english_content").style.display = "block"; 
+                    document.getElementById("skills_bt").innerHTML = 'Skills';
+                    document.getElementById("cv_bt").innerHTML = 'Resume';
+                    document.getElementById("footer").innerHTML = `${new Date().getFullYear()}, Ana Lemos - Autoral Content`;
+                    document.getElementById("download_pt").innerHTML = 'Portuguese - BR';
+                    document.getElementById("download_en").innerHTML = 'English';
                 }else{
                     document.getElementById("portuguese_content").style.display = "block"; 
                     document.getElementById("english_content").style.display = "none"; 
+                    document.getElementById("skills_bt").innerHTML = 'Habilidades';
+                    document.getElementById("cv_bt").innerHTML = 'Currículo';
+                    document.getElementById("footer").innerHTML = `${new Date().getFullYear()}, Ana Lemos - Conteúdo autoral`;
+                    document.getElementById("download_pt").innerHTML = 'Português - BR';
+                    document.getElementById("download_en").innerHTML = 'Inglês';
                 }
             },
             error: function(error){

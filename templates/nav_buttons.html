@@ -1,14 +1,26 @@
 <nav class="navbar ps-4 barra" >
+    {% if english == True %}
     <div class="justify-content-start pt-5">
-        <a class="button me-3 borel-regular fs-4" href="{{url_for('home')}}" id="home"> Home </a>
-        <a class="button me-3 borel-regular fs-4" href="{{url_for('skill_page')}}" id="skills"> Habilidades </a>
-        <a class="button me-3 borel-regular fs-4" href="{{url_for('cv_page')}}" id="cv"> Currículo </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('home')}}" id="home_bt"> Home </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('skill_page')}}" id="skills_bt"> Skills </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('cv_page')}}" id="cv_bt"> Resume </a>
+    </div>
+
+    <div class="form-check form-switch"  >
+        <input class="form-check-input" type="checkbox" name='lang_switch' id="flexSwitch" role="switch" onclick="language('{{id}}')" checked>
+        <label class="form-check-label montserrat-font color-hot-brown" for="flexSwitch">EN</label>
+    </div>
+    {% else %}
+    <div class="justify-content-start pt-5">
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('home')}}" id="home_bt"> Home </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('skill_page')}}" id="skills_bt"> Habilidades </a>
+        <a class="button me-3 borel-regular fs-4" href="{{url_for('cv_page')}}" id="cv_bt"> Currículo </a>
     </div>
     
     <div class="form-check form-switch"  >
         <input class="form-check-input" type="checkbox" name='lang_switch' id="flexSwitch" role="switch" onclick="language('{{id}}')" >
-        <input class="form-check-input" type="checkbox" name='lang_switch_checked' id="flexSwitch_checked" role="switch" onclick="language('{{id}}')" style="display: none;" checked >
         <label class="form-check-label montserrat-font color-hot-brown" for="flexSwitch">EN</label>
     </div>
+    {% endif %}
 </nav>
 <hr>
