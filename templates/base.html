@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style1.css')}}">
   </head>
-  <body onload="activeURL('{{id}}','{{english}}')">
+  <body onload="activeURL('{{id}}','{{english}}')" background="{{url_for('static', filename='img/img_autoral_ana_lemos.jpg')}}">
     <div class="container-fluid">
-        <body background="{{url_for('static', filename='img/img_autoral_ana_lemos.jpg')}}"></body>
+       
         <div class="container-sm">
             {% include "nav_buttons.html" %}
             {% block content%}{% endblock %}
