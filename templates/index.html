@@ -1,25 +1,24 @@
 {%  extends "base.html" %}
 
 {% block content %}
+
 <!-- <div class="align-middle content body-font cv-body mt-1"></div> -->
 <div class="row">
-    <div class="col-8 content" id="english_content" style="display: none;">
+    <div class="col-8 content" id="english_content" >
       <h1 class="montserrat-font body-font px-3"> Hi, I'm Ana </h1>
       <p class="montserrat-font body-font ft-body-size mt-4 px-3"> I'm an I.T professional with about 8 years of experience now. During these years had the chance to work as web developer, execution tester, security support on cloud servers</p>
       <p class="montserrat-font body-font ft-body-size mt-4 px-3"> This web page was created using Python, Javascript, Flask, Bootstrap and google fonts, text content, images and animations are autoral creations. </p>
-      
-      <!-- I've working with I.T for almost 8 years now, most part of time I was a system administrator but in 2021 I started to work in a new project that gave me the chance to start to change my expertise and become a Python developer.
-      I discovered myself enjoying a lot being developer and try to find solutions for issues or create automation that bring team a easier work life really make me feel glad in a new way -->
     </div> 
-    <div class="col-8 content" id="portuguese_content" style="display: block;">
-      <h1 class="montserrat-font body-font px-3"> Olá, me chamo Ana </h1>
-      <!-- <h3 class="montserrat-font body-font px-3"> Meu nome é Ana</h3> -->
-      <p class="montserrat-font body-font ft-body-size mt-4 px-3"> Sou uma profissional de T.I com mais de 7 anos de experiência transitando entre áreas como desenvolvimento web, monitoramento de execução de testes, resolução de vulnerabilidades em servidores cloud e suporte a middlewares </p>
-      <p class="montserrat-font body-font ft-body-size mt-4 px-3"> Este site foi criado utilizando Python, Javascript, Flask, Bootstrap e google fonts, conteúdo de texto, imagem e animação são criações autorais. </p>
+  
+    <div class="col-8 content" id="portuguese_content">
+        <h1 class="montserrat-font body-font px-3"> Olá, me chamo Ana </h1>
+        <p class="montserrat-font body-font ft-body-size mt-4 px-3"> Sou uma profissional de T.I com mais de 7 anos de experiência transitando entre áreas como desenvolvimento web, monitoramento de execução de testes, resolução de vulnerabilidades em servidores cloud e suporte a middlewares </p>
+        <p class="montserrat-font body-font ft-body-size mt-4 px-3"> Este site foi criado utilizando Python, Javascript, Flask, Bootstrap e google fonts, conteúdo de texto, imagem e animação são criações autorais. </p>
+      </div>
+  
+    <div class="col content">
+      <img src="{{url_for('static', filename='img/char_sem_ruido.gif')}}" class="img-fluid gif-intro"  alt="">
     </div>
-  <div class="col content">
-    <img src="{{url_for('static', filename='img/char_sem_ruido.gif')}}" class="img-fluid gif-intro"  alt="">
-  </div>
 </div>
 
 {% endblock %}

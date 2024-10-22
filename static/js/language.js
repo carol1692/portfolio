@@ -5,6 +5,12 @@ function activeURL(element, english){
         document.getElementById("download_pt").innerHTML = 'Portuguese - BR';
         document.getElementById("download_en").innerHTML = 'English';
     }
+    else{
+        document.getElementById("portuguese_content").style.display = "block"; 
+        document.getElementById("english_content").style.display = "none"; 
+        document.getElementById("download_pt").innerHTML = 'Português - BR';
+        document.getElementById("download_en").innerHTML = 'Inglês';
+    }
     document.getElementById(element).classList.add("active","fw-bold")
 }
    
