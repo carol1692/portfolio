@@ -47,12 +47,11 @@ def cv_page():
 
 @app.route("/download/<cv_version>", methods=['GET', 'POST'])
 def download_cv(cv_version):
-    print(cv_version)
     if cv_version == 'cv_pt':
-        path= 'static/cvs/cv_Ana Lemos - pt-br.pdf'
+        path= r'static/cvs/cv- Ana Lemos - pt-br.pdf'
         return send_file(path, as_attachment=True)
     else:
-        path= 'static/cvs/cv - Ana Lemos - en.pdf'
+        path= r'static/cvs/cv - Ana Lemos - en.pdf'
         return send_file(path, as_attachment=True)
        
     
