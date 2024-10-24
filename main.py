@@ -11,7 +11,7 @@ YEAR = current_date.year
 def change_language(lang_list):
     new_mode = request.form.get('data')
     if len(lang_list) > 0:
-        lang_list.clear()
+        lang_list[:] = []
     result = lang_list.append(bool(int(new_mode)))
     return result
 
@@ -57,5 +57,5 @@ def download_cv(cv_version):
     
 
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
     app.run()

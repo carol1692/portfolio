@@ -1,4 +1,8 @@
 function activeURL(element, english){
+    if (!localStorage.getItem('backgroundLoaded')) {
+        document.body.style.backgroundImage = "url('{{url_for('static', filename='img/img_autoral_ana_lemos_progressive.jpg')}}')";
+        localStorage.setItem('backgroundLoaded', 'true'); // Marca a imagem como carregada
+    }
     if (english == 'True'){
         document.getElementById("portuguese_content").style.display = "none"; 
         document.getElementById("english_content").style.display = "block"; 
